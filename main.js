@@ -1,8 +1,11 @@
 function inicio() {
   const nombre = prompt("Favor de ingresar su nombre");
+  const apellido = prompt("Favor de ingresar su apellido");
   alert(
     "Hola " +
       nombre +
+      " " +
+      apellido +
       "!" +
       " le damos la bienvenida a CELESTINA: Vida a Granel"
   );
@@ -39,7 +42,15 @@ function compraFinalizada() {
   }
 }
 
+function diaEntrega() {
+  delivery = prompt(
+    "Elige el día para la entrega \n 1: Lunes \n 2: Martes \n 3: Miercoles \n 4: Jueves \n 5: Viernes \n 6: Sábado \n 7: Domingo"
+  );
+  alert("Día seleccionado para la entrega");
+}
+
 let producto;
+let delivery;
 const avena = 10;
 const cereales = 15;
 const granos = 8;
@@ -56,8 +67,11 @@ while (opcion !== "3") {
       break;
     case "2":
       compraFinalizada();
+      diaEntrega();
       opcion = "3";
   }
 }
 
-alert("Gracias por su compra, vuelva pronto");
+alert(
+  "Gracias por su compra, la entrega se realizará el día indicado. Vuelva pronto!"
+);
